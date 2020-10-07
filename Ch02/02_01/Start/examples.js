@@ -29,5 +29,28 @@ const add = (arg1, arg2) => {
 // when the only statement in a function is its return statement
 // we can drop brackets and the return keyword
 // as below
+// this is a way of reducing clutter for regular functions
 
 const add = (arg1, arg2) => arg1 + arg2;
+
+// arrow functions also reduce clutter for functions defined with only one argument
+// we are able to remove the parenthesis around the 1 argument (my ESLint forces parenthesis though)
+
+const double = (number) => number * 2;
+
+// the same function above would be written in ES5 syntax as:
+
+const double = function (number) {
+  return number * 2;
+};
+
+// as for an arrow function with no arguments:
+const sayHello = () => console.log("Hello");
+
+// as for an arrow function that returns an objects we need to wrap the function properties in parenthesis
+const getPersonData = () => ({
+  // define object properties
+  name: "John",
+  age: 34,
+  job: "programmer",
+});
